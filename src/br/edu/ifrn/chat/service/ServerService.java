@@ -9,24 +9,31 @@ import java.util.*;
 public class ServerService {
 
     private static ServerService instance;
-    private static final int PORT = 7896;
+    
 
     private ServerSocket serverSocket;
     private Socket socket;
     private Map<String, ObjectOutputStream> usersMap;
 
-    private ServerService() {
+    private ServerService(int PORT) {
         this.usersMap = new HashMap<String, ObjectOutputStream>();        
-        startServer();
+        startServer(PORT);
     }
     
-    public static synchronized ServerService getInstance() {
+    public static synchronized ServerService getInstance(int PORT) {
         if (instance == null) {
-            instance = new ServerService();
+            instance = new ServerService(PORT);
         }
         return instance;
     }
 
+    public static synchronized ServerService closeServerService() throws Throwable{
+        if (instance != null){
+            instance.finalize();
+        }
+        return instance;
+    }
+    
     private class Listener implements Runnable {
 
         private ObjectInputStream input;
@@ -69,10 +76,9 @@ public class ServerService {
         }
     }
 
-    private void startServer() {
+    private void startServer(int PORT) {
         try {
             this.serverSocket = new ServerSocket(PORT);
-            System.out.println("Server on\nExecute manualmente a classe 'Client' para realizar a conexão com o servidor");
             while (true) {
                 this.socket = this.serverSocket.accept();
                 new Thread(new Listener(this.socket)).start();
