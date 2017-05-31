@@ -1,6 +1,6 @@
 package br.edu.ifrn.chat.model;
 
-import br.edu.ifrn.chat.enumarator.Command;
+import br.edu.ifrn.chat.enumarator.Commando;
 import java.io.*;
 import java.util.*;
 
@@ -10,7 +10,7 @@ public class DataPackage implements Serializable {
     private String userReserved;
     private Set<String> usersOnLine;
     private String message;    
-    private Command action;    
+    private Commando action;    
 
     public DataPackage() {
         this.usersOnLine = new HashSet<String>();
@@ -48,11 +48,11 @@ public class DataPackage implements Serializable {
         this.message = message;
     }
 
-    public Command getAction() {
+    public Commando getAction() {
         return action;
     }
 
-    public void setAction(Command action) {
+    public void setAction(Commando action) {
         this.action = action;
     }
     

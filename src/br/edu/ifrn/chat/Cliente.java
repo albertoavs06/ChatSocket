@@ -1,8 +1,8 @@
 package br.edu.ifrn.chat;
 
-import br.edu.ifrn.chat.frame.ClientFrame;
+import br.edu.ifrn.chat.frame.ClienteFrame;
 
-public class Client {
+public class Cliente {
     
     /**
      * @param args the command line arguments
@@ -21,13 +21,14 @@ public class Client {
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ClientFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ClienteFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new ClientFrame().setVisible(true);
+            new ClienteFrame().setVisible(true);
         });
     }
 }

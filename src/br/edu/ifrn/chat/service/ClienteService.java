@@ -4,7 +4,7 @@ import br.edu.ifrn.chat.model.DataPackage;
 import java.io.*;
 import java.net.*;
 
-public class ClientService {
+public class ClienteService {
     
     //Insira seu IP, caso execute em uma máquina diferente do servidor... 
     //private static final String IP_CLIENT = "localhost";

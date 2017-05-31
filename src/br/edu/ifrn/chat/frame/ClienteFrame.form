@@ -34,15 +34,15 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" alignment="0" pref="332" max="32767" attributes="0"/>
-                  <Component id="jScrollPane3" alignment="0" pref="332" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" alignment="0" pref="413" max="32767" attributes="0"/>
+                  <Component id="jScrollPane3" alignment="0" pref="413" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="btnSend" min="-2" pref="84" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="76" pref="248" max="32767" attributes="0"/>
+                      <EmptySpace min="76" pref="355" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
